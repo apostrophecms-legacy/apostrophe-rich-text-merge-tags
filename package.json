@@ -1,0 +1,32 @@
+{
+  "name": "apostrophe-rich-text-merge-tags",
+  "version": "2.0.0",
+  "description": "\"Merge tags\" for your rich text widgets, like merge tags in Mailchimp, Zendesk and other apps that support mail merge. Change the name of your brand, your product, your address, etc. in just one place and it appears everywhere the merge tag is used.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apostrophecms/apostrophe-rich-text-merge-tags.git"
+  },
+  "keywords": [
+    "merge",
+    "tags",
+    "apostrophecms",
+    "apostrophe",
+    "content",
+    "management",
+    "system"
+  ],
+  "author": "P'unk Avenue LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apostrophecms/apostrophe-rich-text-merge-tags/issues"
+  },
+  "homepage": "https://github.com/apostrophecms/apostrophe-rich-text-merge-tags#readme",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "sanitize-html": "^1.18.5"
+  }
+}
