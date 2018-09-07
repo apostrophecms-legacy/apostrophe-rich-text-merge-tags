@@ -3,10 +3,11 @@ apos.define('apostrophe-rich-text-merge-tags', {
     self.options = options;
     CKEDITOR.plugins.addExternal('mergetags', '/modules/apostrophe-rich-text-merge-tags/js/ckeditorPlugins/mergetags/', 'plugin.js');
 
-    apos.on('ready', function() {
+    apos.on('enhance', function($el) {
+      $el = $el || $('body');
       // An old value will already be there, but update with the
       // latest value
-      $('[data-apos-merge-tag]').each(function() {
+      $el.find('[data-apos-merge-tag]').each(function() {
         var $tag = $(this);
         var id = $tag.attr('data-apos-merge-tag');
         var tags = self.options.mergeTags;
