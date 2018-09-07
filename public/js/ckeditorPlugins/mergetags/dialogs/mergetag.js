@@ -1,4 +1,4 @@
-CKEDITOR.dialog.add( 'mergetag', function( editor ) {
+CKEDITOR.dialog.add('mergetag', function(editor) {
   return {
     title: 'Select Merge Tag',
     minWidth: 200,
@@ -21,7 +21,7 @@ CKEDITOR.dialog.add( 'mergetag', function( editor ) {
             commit: function(widget) {
               widget.setData('mergeTagId', this.getValue());
             },
-            validate: CKEDITOR.dialog.validate.notEmpty( "You must select a merge tag." ),
+            validate: CKEDITOR.dialog.validate.notEmpty("You must select a merge tag.")
           }
         ]
       }

@@ -2,14 +2,14 @@ CKEDITOR.plugins.add('mergetags', {
   requires: 'widget',
   icons: 'mergetag',
   init: function(editor) {
-    CKEDITOR.dialog.add('mergetag', this.path + 'dialogs/mergetag.js' );
+    CKEDITOR.dialog.add('mergetag', this.path + 'dialogs/mergetag.js');
     editor.widgets.add('mergetag', {
       template: '<span class="apos-merge-tag" data-apos-merge-tag="test">Merge Tag</span>',
       button: 'Insert a merge tag whose value is set elsewhere',
       dialog: 'mergetag',
       allowedContent: 'span(!apos-merge-tag)[!data-apos-merge-tag]',
       draggable: false,
-      upcast: function( element ) {
+      upcast: function(element) {
         return (element.name === 'span') && element.hasClass('apos-merge-tag');
       },
       init: function() {
@@ -30,4 +30,3 @@ CKEDITOR.plugins.add('mergetags', {
     });
   }
 });
-
