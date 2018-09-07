@@ -18,4 +18,3 @@ apos.define('apostrophe-rich-text-merge-tags', {
     });
   }
 });
-
