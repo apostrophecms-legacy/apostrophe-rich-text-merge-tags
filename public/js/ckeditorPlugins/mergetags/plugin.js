@@ -21,7 +21,7 @@ CKEDITOR.plugins.add('mergetags', {
         var tag = _.find(getMergeTags(), { id: id }) || {
           value: '*MISSING*'
         };
-        console.log('VALUE: ', tag.value);
+
         this.element.setHtml(apos.utils.escapeHtml(tag.value).replace(/\n/g, '<br />\n'));
         function getMergeTags() {
           return apos.modules['apostrophe-rich-text-merge-tags'].options.mergeTags;
