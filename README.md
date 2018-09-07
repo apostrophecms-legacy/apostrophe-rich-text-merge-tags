@@ -24,6 +24,10 @@ Of course, ordinary site visitors see them as ordinary text with no special styl
 
 Line breaks are allowed in the values of merge tags. No other formatting is permitted.
 
+## Requirements
+
+Requires Apostrophe `2.66.0` or better.
+
 ## Installation
 
 ```
@@ -54,4 +58,15 @@ modules: {
 }}
 ```
 
-Requires Apostrophe `2.66.0` or better.
+## Warnings
+
+Merge tags in rich text will appear up to date only if they are rendered via `apos.area()`, `apos.singleton()`, or `apos.areas.richText()`. If you are trying to access the `content` property of a rich text widget directly, don't. Instead write:
+
+```
+{# If your area potentially containing rich text is called body, #}
+{# and all you want is the rich text #}
+{{ apos.areas.richText(doc.body) }}
+```
+
+You can call `apos.modules['apostrophe-rich-text-merge-tags'].resolve(req, html)` to resolve any merge tags present in the given rich text markup to the latest text. Just don't save them back to the database that way, as you would lose the spans and attributes that make Apostrophe aware they are merge tags.
+
