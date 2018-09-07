@@ -1,4 +1,8 @@
-With this module, you can create "merge tags" in [ApostropheCMS](https://apostrophecms.org)...
+With this module, you can create "merge tags" in [ApostropheCMS](https://apostrophecms.org).
+
+Merge tags are bits of text that you can reuse and reference in any rich text editor configured for them. Add a merge tag and its text value here, then look for the puzzle piece icon in the toolbar of your rich text editor to place the merge tag. If you later edit the text value here, the change will take effect **everywhere the merge tag has been placed.**
+
+For example...
 
 <p align="center"><img src="https://raw.githubusercontent.com/apostrophecms/apostrophe-rich-text-merge-tags/master/screenshots/screenshot-1.png" /></p>
 
