@@ -35,7 +35,7 @@ module.exports = {
         // "Why no regexps?" We need to do this as quickly as we can.
         // indexOf and lastIndexOf are much faster.
         var prefix = '<span class="apos-merge-tag" data-apos-merge-tag="';
-        i = content.indexOf(prefix);
+        var i = content.indexOf(prefix);
         if (i === -1) {
           break;
         }
