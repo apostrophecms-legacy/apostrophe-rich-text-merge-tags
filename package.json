@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-rich-text-merge-tags",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "\"Merge tags\" for your rich text widgets, like merge tags in Mailchimp, Zendesk and other apps that support mail merge. Change the name of your brand, your product, your address, etc. in just one place and it appears everywhere the merge tag is used.",
   "main": "index.js",
   "scripts": {

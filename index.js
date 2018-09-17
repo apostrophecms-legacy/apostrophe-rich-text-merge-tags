@@ -16,10 +16,12 @@ module.exports = {
     self.pushAsset('script', 'user', { when: 'user' });
     self.pushCreateSingleton();
     self.on('apostrophe-pages:beforeSend', 'pushMergeTags', function(req) {
-      // We need this to take effect right on the page if the global doc has
-      // just been edited. getCreateSingletonOptions only runs once on page load.
-      // So patch the options in the singleton already in the browser.
-      req.browserCall('apos.modules["apostrophe-rich-text-merge-tags"].options.mergeTags = ?', req.data.global.aposMergeTags || []);
+      if (req.user) {
+        // We need this to take effect right on the page if the global doc has
+        // just been edited. getCreateSingletonOptions only runs once on page load.
+        // So patch the options in the singleton already in the browser.
+        req.browserCall('apos.modules["apostrophe-rich-text-merge-tags"].options.mergeTags = ?', req.data.global.aposMergeTags || []);
+      }
     });
 
     var superGetCreateSingletonOptions = self.getCreateSingletonOptions;
